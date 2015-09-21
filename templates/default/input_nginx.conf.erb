@@ -1,0 +1,23 @@
+input {
+	file {
+		path => "<%= File.join node['nginx']['log_dir'], "access.log" %>"
+		type => "web_nginx_access"
+	}
+}
+
+filter {
+	grok {
+		type => "web_nginx_access"
+		match => [
+			"message", "%{COMBINEDAPACHELOG}"
+				]
+	}
+	date {
+		type => "web_nginx_access"
+		match => [ "timestamp" , "dd/MMM/YYYY:HH:mm:ss Z" ]
+	}
+	geoip {
+		type => "web_nginx_access"
+		source => "clientip"
+	}
+}

@@ -1,0 +1,17 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: ubuntu-12.04
+
+suites:
+  - name: default
+    run_list: host-gatewayos
+    attributes:
+    driver:
+      network:
+        - ["private_network", {ip: "172.16.200.2"}]
