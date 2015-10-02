@@ -11,7 +11,7 @@ include_recipe "ls3-defaults"
 include_recipe "nginx"
 include_recipe "nginx_conf"
 
-route "172.16.0.0/17" do
+route "172.0.0.0/8" do
 	gateway "172.16.200.1"
 end
 
