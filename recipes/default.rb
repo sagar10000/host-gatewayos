@@ -55,6 +55,10 @@ nginx_conf_file "streamsurveyos.informatik.uni-wuerzburg.de" do
   socket "172.16.200.91:8080"
 end
 
+nginx_conf_file "whatsanalyzer.informatik.uni-wuerzburg.de" do
+  socket "132.187.12.136:8080"
+end
+
 nginx_conf_file "youtubedb.informatik.uni-wuerzburg.de" do
   socket "172.17.4.14:5601"
 end
