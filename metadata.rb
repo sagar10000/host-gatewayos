@@ -4,7 +4,7 @@ maintainer_email 'YOUR_EMAIL'
 license          'All rights reserved'
 description      'Installs/Configures host-gateway'
 long_description 'Installs/Configures host-gateway'
-version          '0.2.0'
+version          '0.2.1'
 
 depends "nginx_conf"
 depends "ls3-defaults"
