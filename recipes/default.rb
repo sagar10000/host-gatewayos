@@ -15,11 +15,6 @@ route "172.0.0.0/8" do
 	gateway "172.16.200.1"
 end
 
-group "adm" do
-	action :modify
-	members "logstash"
-	append true
-end
 
 node.default[:nginx_conf][:pre_socket] = 'http://'
 
@@ -66,3 +61,9 @@ end
 nginx_conf_file "youtubedb.informatik.uni-wuerzburg.de" do
   socket "172.17.4.14:5601"
 end
+
+nginx_conf_file "ls3cloud1.informatik.uni-wuerzburg.de" do
+  socket "132.187.12.10"
+end
+
+
