@@ -70,4 +70,9 @@ nginx_conf_file "ls3cloud1.informatik.uni-wuerzburg.de" do
   socket "132.187.12.10"
 end
 
+nginx_conf_file "vallos.informatik.uni-wuerzburg.de" do
+  socket "172.16.48.210:8080"
+end
+
+
 
