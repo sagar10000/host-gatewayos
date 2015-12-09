@@ -43,7 +43,7 @@ nginx_conf_file "crowdios.informatik.uni-wuerzburg.de" do
 end
 
 nginx_conf_file "taskios.informatik.uni-wuerzburg.de" do
-  socket "172.16.200.90"
+  socket "172.16.200.92"
 end
 
 nginx_conf_file "zae-nutzerumfrage.informatik.uni-wuerzburg.de" do
