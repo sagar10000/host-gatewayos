@@ -74,5 +74,10 @@ nginx_conf_file "vallos.informatik.uni-wuerzburg.de" do
   socket "172.16.48.210:8080"
 end
 
+nginx_conf_file "videotensiontest.informatik.uni-wuerzburg.de" do
+  socket "172.16.36.10:8080"
+end
+
+
 
 
