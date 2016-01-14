@@ -78,6 +78,9 @@ nginx_conf_file "videotensiontest.informatik.uni-wuerzburg.de" do
   socket "172.16.36.10:8080"
 end
 
+nginx_conf_file "yomoappos.informatik.uni-wuerzburg.de" do
+  socket "172.16.36.11:8080"
+end
 
 
 
