@@ -1,0 +1,6 @@
+{
+  "name": "vallos.informatik.uni-wuerzburg.de",
+  "nginx": {
+    "backend": "http://172.16.48.210:8080"
+  }
+}

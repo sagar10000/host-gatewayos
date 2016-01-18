@@ -5,3 +5,5 @@
 #default['elkstack']['config']['custom_logstash']["nginx"]['variables'] = {}
 
 default['nginx']['client_max_body_size']= '15m'
+default['nginx_conf']['pre_socket'] = ''
+default['nginx_conf']['options'] = {}

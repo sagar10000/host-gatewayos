@@ -1,0 +1,7 @@
+{
+  "name": "whatsanalyzer.informatik.uni-wuerzburg.de",
+  "nginx": {
+    "backend": "http://132.187.12.136:8080",
+    "access": "internet"
+  }
+}
