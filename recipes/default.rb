@@ -8,11 +8,11 @@
 #
 
 include_recipe "ls3-defaults"
-include_recipe "nginx"
-include_recipe "nginx_conf"
 
-route "172.0.0.0/8" do
-	gateway "172.16.200.1"
+include_recipe "#{cookbook_name}::_nginx"
+
+route "172.16.0.0/12" do
+  gateway "172.16.200.1"
 end
 
 
@@ -66,13 +66,13 @@ nginx_conf_file "youtubedb.informatik.uni-wuerzburg.de" do
   socket "172.17.4.14:5601"
 end
 
-nginx_conf_file "ls3cloud1.informatik.uni-wuerzburg.de" do
-  socket "132.187.12.10"
-end
-
-nginx_conf_file "vallos.informatik.uni-wuerzburg.de" do
-  socket "172.16.48.210:8080"
-end
+# nginx_conf_file "ls3cloud1.informatik.uni-wuerzburg.de" do
+#   socket "132.187.12.10"
+# end
+#
+# nginx_conf_file "vallos.informatik.uni-wuerzburg.de" do
+#   socket "172.16.48.210:8080"
+# end
 
 nginx_conf_file "videotensiontest.informatik.uni-wuerzburg.de" do
   socket "172.16.36.10:8080"

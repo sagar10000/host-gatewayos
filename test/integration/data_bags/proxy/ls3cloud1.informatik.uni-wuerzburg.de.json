@@ -1,0 +1,6 @@
+{
+  "name": "ls3cloud1.informatik.uni-wuerzburg.de",
+  "nginx": {
+    "backend": "https://172.17.0.3:443"
+  }
+}
