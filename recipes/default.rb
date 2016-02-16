@@ -32,7 +32,7 @@ nginx_site 'default' do
   enable false
 end
 
-%w(itc28.org www.itc28.org beta.i-teletraffic.org itc25.com www.itc25.com).each do |external_domain|
+%w(itc28.org www.itc28.org beta.i-teletraffic.org itc25.com www.itc25.com i-teletraffic.org www.i-teletraffic.org).each do |external_domain|
 	nginx_conf_file external_domain do
 	  socket "132.187.12.29:8080"
 	end
