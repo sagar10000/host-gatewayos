@@ -79,7 +79,7 @@ nginx_conf_file "videotensiontest.informatik.uni-wuerzburg.de" do
 end
 
 nginx_conf_file "yomoappos.informatik.uni-wuerzburg.de" do
-  socket "172.17.1.239"
+  socket "172.17.2.87"
 end
 
 
