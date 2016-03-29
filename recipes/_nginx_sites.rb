@@ -85,26 +85,28 @@ sites.each do |site|
       )
       options options
     end
+
+
+    nginx_conf_file site['name'] + "-redirect" do
+      server_name site['name']
+      site_type :static
+      options(
+          "return" => "301 https://$server_name$request_uri"
+      )
+    end
+
   rescue
     log "no-certificate-for-#{site['name']}" do
       level :warn
       message "Missing SSL certificate for #{site['name']}. Setting up HTTP only."
     end
-    # raise "Missing certificate for host #{site['name']} (defined by a chef-vault data bag 'certificates/#{site['name']}')"
-  end
 
-  nginx_conf_file site['name'] do
-    server_name site['name']
-    socket site['nginx']['backend']
-    options options
-  end
+    nginx_conf_file site['name'] do
+      server_name site['name']
+      socket site['nginx']['backend']
+      options options
+    end
 
-  # nginx_conf_file site['name'] do
-  #   server_name site['name']
-  #   site_type :static
-  #   options(
-  #       "return" => "301 https://$server_name$request_uri"
-  #   )
-  # end
+  end
 
 end
