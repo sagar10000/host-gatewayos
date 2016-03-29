@@ -15,3 +15,4 @@ suites:
     driver:
       network:
         - ["private_network", {ip: "172.16.200.2"}]
+        - ["private_network", {ip: "192.168.12.42"}]
