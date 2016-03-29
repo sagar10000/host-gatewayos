@@ -2,7 +2,18 @@
   "id": "www3.informatik.uni-wuerzburg.de",
   "name": "www3.informatik.uni-wuerzburg.de",
   "nginx": {
-    "backend": "http://phobos.informatik.uni-wuerzburg.de:80",
-    "access": "internet"
+    "backend": "https://phobos.informatik.uni-wuerzburg.de:443",
+    "access": "internet",
+    "options": {
+      "locations": {
+        "/publications/": {
+          "proxy_pass":  "http://publicos.informatik.uni-wuerzburg.de:8080/",
+          "proxy_set_header": {
+            "Host": "publicos.informatik.uni-wuerzburg.de",
+            "X-Forwarded-For": "$proxy_add_x_forwarded_for"
+          }
+        }
+      }
+    }
   }
 }
