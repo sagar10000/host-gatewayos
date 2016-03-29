@@ -1,0 +1,7 @@
+{
+  "id": "no-ssl-test.informatik.uni-wuerzburg.de",
+  "name": "no-ssl-test.informatik.uni-wuerzburg.de",
+  "nginx": {
+    "backend": "http://example.com"
+  }
+}

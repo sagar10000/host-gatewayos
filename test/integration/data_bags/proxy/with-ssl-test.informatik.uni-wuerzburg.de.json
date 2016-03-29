@@ -1,0 +1,7 @@
+{
+  "id": "with-ssl-test.informatik.uni-wuerzburg.de",
+  "name": "with-ssl-test.informatik.uni-wuerzburg.de",
+  "nginx": {
+    "backend": "https://example.com:443"
+  }
+}

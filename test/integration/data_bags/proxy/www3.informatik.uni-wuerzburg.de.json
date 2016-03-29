@@ -1,0 +1,8 @@
+{
+  "id": "www3.informatik.uni-wuerzburg.de",
+  "name": "www3.informatik.uni-wuerzburg.de",
+  "nginx": {
+    "backend": "http://phobos.informatik.uni-wuerzburg.de:80",
+    "access": "internet"
+  }
+}
