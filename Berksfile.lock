@@ -22,7 +22,7 @@ GRAPH
   chocolatey (1.0.0)
     windows (~> 1.38)
   cron (1.7.6)
-  host-gatewayos (0.2.10)
+  host-gatewayos (0.2.11)
     ls3-defaults (>= 0.0.0)
     nginx_conf (>= 0.0.0)
   hostname (0.3.0)
