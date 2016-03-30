@@ -8,3 +8,4 @@ version          '0.2.11'
 
 depends "nginx_conf"
 depends "ls3-defaults"
+depends "openssl", "= 4.4.0"

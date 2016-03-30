@@ -88,12 +88,24 @@ sites.each do |site|
 
   begin
     cert_databag = chef_vault_item('certificates', site['name'])
+  rescue
+    cert_databag = nil
+  end
+
+
+  if cert_databag # we have SSL
+
+    cert_bundle = cert_databag['crt']
+    if cert_databag.has_key?('ca_bundle')
+      cert_bundle << "\n"
+      cert_bundle << cert_databag['ca_bundle']
+    end
 
     nginx_conf_file site['name'] do
       listen "443"
       socket site['nginx']['backend']
       ssl(
-        "public" => cert_databag['crt'],
+        "public" => cert_bundle,
         "private" => cert_databag['key']
       )
       options options
@@ -108,7 +120,7 @@ sites.each do |site|
       )
     end
 
-  rescue
+  else # no SSL
     log "no-certificate-for-#{site['name']}" do
       level :warn
       message "Missing SSL certificate for #{site['name']}. Setting up HTTP only."
