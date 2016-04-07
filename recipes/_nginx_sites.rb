@@ -21,9 +21,15 @@ nginx_site 'default' do
   enable false
 end
 
-%w(itc28.org www.itc28.org beta.i-teletraffic.org itc25.com www.itc25.com).each do |external_domain|
+%w(itc28.org www.itc28.org).each do |external_domain|
 	nginx_conf_file external_domain do
 	  socket "http://132.187.12.29:8080"
+  end
+end
+
+%w(i-teletraffic.org i-teletraffic.org).each do |external_domain|
+	nginx_conf_file external_domain do
+	  socket "http://132.187.12.29:8070"
   end
 end
 
