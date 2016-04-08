@@ -23,7 +23,7 @@ GRAPH
   chocolatey (1.0.0)
     windows (~> 1.38)
   cron (1.7.6)
-  host-gatewayos (0.2.12)
+  host-gatewayos (0.2.14)
     ls3-defaults (>= 0.0.0)
     nginx_conf (>= 0.0.0)
     openssl (= 4.4.0)
